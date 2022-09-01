@@ -18,7 +18,7 @@ public class Controller {
     @Autowired
     public IPerfilService perfilServ;
     
-    @PostMapping ("/perfil/edit")
+    @PutMapping ("/perfil/edit")
     public void editPerfil(@RequestBody Perfil perf){
         perfilServ.editPerfil(perf);
     }
