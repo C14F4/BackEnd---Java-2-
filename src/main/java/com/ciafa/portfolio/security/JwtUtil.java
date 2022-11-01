@@ -22,9 +22,9 @@ public class JwtUtil {
 
             .signWith(SignatureAlgorithm.HS512, "C14f4")
             .compact();
-        String respuesta = "{ \"accessToken\" : \""+ token +"\"}";
+        //String respuesta = "{ \"accessToken\" : \""+ token +"\"}";
         res.addHeader("Authorization", "Bearer " + token);
-        res.getWriter().write(respuesta);
+        //res.getWriter().write(respuesta);
     }
 
     static Authentication getAuthentication(HttpServletRequest request) {
